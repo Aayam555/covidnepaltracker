@@ -1,0 +1,55 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+#heading{
+	font-size: 2rem;
+	text-align: center;
+	margin: 20px 0;
+}
+
+.button{
+	text-decoration: none;
+	color: black;
+}
+
+.links{
+	text-align: center;
+	margin: 30px auto;
+}
+
+.website{
+	position: relative;
+	right: 70px;
+}
+
+.github{
+	position: relative;
+	right: 10px;
+}
+
+.home{
+	position: relative;
+	left: 70px;
+}
+
+.website, .github, .home{
+	border: none;
+	border-radius: 10px;
+	color: white;
+	padding: 10px 20px;
+}
+
+.website{
+	background-color: #009ddb;
+}
+
+.github{
+	background-color: #696969;
+}
+
+.home{
+	background-color: #8ACA2B;
+}
