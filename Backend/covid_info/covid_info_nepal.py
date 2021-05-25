@@ -31,5 +31,3 @@ def covid_info_nepal():
 	covid_info_nepal = {"cases": cases, "recovered": recovered, "deaths": deaths, "image": image}
 
 	return covid_info_nepal
-
-covid_info_nepal()
