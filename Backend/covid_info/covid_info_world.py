@@ -22,9 +22,6 @@ def table_countries_data():
 		country_info = table_row.text
 		country_info = country_info.split("\n")
 
-		while "" in country_info:
-			country_info.remove("")
-
 
 		for country in country_info:
 			if country_info[0].isdigit():
@@ -43,16 +40,16 @@ def table_countries_data():
 
 			country_info_processed_data.append(info)
 
-		try:	
-			data = {"country": country_info_processed_data[0],
-					 "total_cases": country_info_processed_data[1],
-					 "new_cases": country_info_processed_data[2],
-					 "total_deaths": country_info_processed_data[3],
-					 "new_deaths": country_info_processed_data[4],
-					 "total_recovered": country_info_processed_data[5],
-					 "new_recovered": country_info_processed_data[6],
-					 "active_cases": country_info_processed_data[7],
-					 "serious_critical": country_info_processed_data[8],
+		try:
+			data = {"country": country_info_processed_data[2],
+					 "total_cases": country_info_processed_data[3].replace(" ", ""),
+					 "new_cases": country_info_processed_data[4],
+					 "total_deaths": country_info_processed_data[5],
+					 "new_deaths": country_info_processed_data[6],
+					 "total_recovered": country_info_processed_data[7],
+					 "new_recovered": country_info_processed_data[8],
+					 "active_cases": country_info_processed_data[9],
+					 "serious_critical": country_info_processed_data[10],
 					 # "population": country_info_processed_data[13],
 					 # "continent": country_info_processed_data[14]
 					}
@@ -69,4 +66,3 @@ def covid_info_world():
 	This function returns covid cases of world and countries
 	'''
 	return table_countries_data()
-
