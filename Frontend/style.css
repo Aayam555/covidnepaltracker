@@ -46,3 +46,19 @@
 .data{
 	margin: 30px;
 }
+
+#country-input{
+	position: relative;
+	left: 35rem;
+	height: 2rem;
+	font-size: 1.5rem;
+	width: 13rem;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-color: #03a9f4;
+}
+
+#country-input:focus{
+	outline: none;
+}
