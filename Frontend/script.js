@@ -59,11 +59,11 @@ const filter_by_country = () => {
 	let country_flag_image_url = "";
 
 	for (let image_index = 0; image_index < covid_info_flags.length; image_index++){
-		if (country_input_value == "usa"){
+		if (country_input_value.toLowerCase() == "usa"){
 			country_flag_image_url = "https://www.worldometers.info/img/flags/small/tn_us-flag.gif";
 		}
 
-		else if (country_input_value == "uk"){
+		else if (country_input_value.toLowerCase() == "uk"){
 			country_flag_image_url = "https://www.worldometers.info/img/flags/small/tn_uk-flag.gif";
 		}
 
@@ -82,11 +82,5 @@ const filter_by_country = () => {
 		}
 	}
 
-
+	country_input.value = "";
 }
-
-let country_input = document.getElementById("country-input");
-country_input.addEventListener("keydown", (event) => {
-	if (event.code == "Enter"){
-		filter_by_country();
-}})
